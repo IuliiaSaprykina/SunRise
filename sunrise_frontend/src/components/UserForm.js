@@ -36,12 +36,14 @@ export default class UserForm extends Component {
 
     render(){
         return(
-            <form className="location-form" onSubmit={(event) => this.handleSubmit(event)}>
-                <label>Name</label>
-                <input name="name" type="text" placeholder="type your name" value={this.state.name} onChange={(event) => this.changeState(event)}/>
-                <input type="submit" value="Create a new user"/>
-            </form>
-        
+            <>
+                <h3 className="create-user">Create a new user</h3>
+                <form className="user-form" onSubmit={(event) => this.handleSubmit(event)}>
+                    <label>Name</label>
+                    <input name="name" type="text" placeholder="type your name" value={this.state.name} onChange={(event) => this.changeState(event)}/>
+                    <input type="submit" value="Submit"/>
+                </form>
+            </>
         )
     }
 }
