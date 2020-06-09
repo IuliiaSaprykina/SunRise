@@ -5,17 +5,22 @@ import './App.css';
 
 const usersUrl = "http://localhost:3000/users"
 const locationUrl = "http://localhost:3000/locations"
+const lat = "36.7201600";
+const lng = "-4.4203400";
+const sunRiseUrl = `https://api.sunrise-sunset.org/json?lat=${lat}&lng=${lng}&date=today`;
 
 export default class App extends Component {
 
   state = {
     users: [],
-    locations: []
+    locations: [],
+    stats: []
   }
 
   componentDidMount(){
         this.getUsers();
         this.getLocations();
+        this.getStats();
   }
 
   getLocations = () => {
@@ -28,6 +33,12 @@ export default class App extends Component {
     fetch(usersUrl)
         .then(response => response.json())
         .then(users => this.setState({users}))
+  }
+
+  getStats = () => {
+    fetch(sunRiseUrl)
+        .then(response => response.json())
+        .then(stats => this.setState({stats}))
   }
 
   addUser = (user) => {
@@ -53,7 +64,7 @@ export default class App extends Component {
       <div className="App">
         <h1>Rise and Shine</h1>
         <UserForm addUser={this.addUser}/>
-        <Location locations={this.state.locations} />
+        <Location locations={this.state.locations} stats={this.state.stats}/>
       </div>
     );
   }
