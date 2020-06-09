@@ -1,0 +1,15 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  lat: 1.5
+  lng: 1.5
+  sunrise: 2020-06-09 09:51:59
+  image: MyString
+  music: MyString
+
+two:
+  lat: 1.5
+  lng: 1.5
+  sunrise: 2020-06-09 09:51:59
+  image: MyString
+  music: MyString

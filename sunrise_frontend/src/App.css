@@ -1,0 +1,41 @@
+.body{
+  margin: 2em;
+}
+
+.location-list{
+  display: flex;
+  list-style-type: none;
+  flex-flow: row wrap;
+  width: 100%;
+  /* margin: 0 auto; */
+  justify-content: space-between;
+  padding-left: 0;
+}
+
+.location-item h3{
+  text-align: center;
+}
+
+.location-item{
+  width: 400px;
+  height: 300px;
+  margin: 5px;
+  box-shadow: 0 0 10px 6px #614f4f;
+}
+
+.location-image{
+  position: relative;
+  left: 5%;
+  width: 350px;
+  height: 250px;
+  /* margin: 10px; */
+  text-align: center;
+}
+
+h1{
+  text-align: center;
+}
+
+.location-form{
+  text-align: center;
+}
